@@ -60,11 +60,9 @@ export interface TestServerRpcMethods {
 (async () => {
     const resolver = async (url: string, data: string, resolve: (result: any) => void) => {
         console.log(`send to ${url} data ${data}`);
-        resolve('peppe');
     };
     const client = new RpcClient<TestServerRpcMethods>("http://localhost:3000/rpc", resolver);
     const proxy = client.createProxy();
     const result = await proxy.hi({ name: "John", bithday: new Date() });
-    console.log('result', result);
 })();
 ```
