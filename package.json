@@ -1,6 +1,6 @@
 {
   "name": "@habeetat/jrpc-client",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Json RPC Client",
   "main": "build/index.js",
   "private": false,
