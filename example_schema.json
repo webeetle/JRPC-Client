@@ -1,0 +1,103 @@
+{
+    "version": "0.0.8",
+    "info": {
+        "name": "TestServer",
+        "description": "A test server",
+        "version": "1.0.0"
+    },
+    "methods": [
+        {
+            "name": "hi",
+            "description": "say hi",
+            "params": [
+                {
+                    "name": "person",
+                    "description": "The person to greet",
+                    "schema": {
+                        "$schema": "http://json-schema.org/draft-07/schema#",
+                        "type": "object",
+                        "properties": {
+                            "name": {
+                                "type": "string",
+                                "minLength": 1
+                            },
+                            "bithday": {
+                                "type": "date-time"
+                            }
+                        },
+                        "required": [
+                            "name"
+                        ],
+                        "additionalProperties": false
+                    }
+                }
+            ],
+            "result": {
+                "name": "greeting",
+                "description": "The greeting",
+                "schema": {
+                    "type": "string"
+                }
+            }
+        },
+        {
+            "name": "sum",
+            "description": "sum two numbers",
+            "params": [
+                {
+                    "name": "a",
+                    "description": "The first number",
+                    "schema": {
+                        "type": "number"
+                    }
+                },
+                {
+                    "name": "b",
+                    "description": "The second number",
+                    "schema": {
+                        "type": "number"
+                    }
+                }
+            ],
+            "result": {
+                "name": "sum",
+                "description": "The sum",
+                "schema": {
+                    "type": "number"
+                }
+            }
+        },
+        {
+            "name": "getTodos",
+            "description": "get all todos",
+            "params": [],
+            "result": {
+                "name": "todos",
+                "description": "The todos",
+                "schema": {
+                    "type": "array",
+                    "items": {
+                        "type": "object",
+                        "properties": {
+                            "id": {
+                                "type": "number"
+                            },
+                            "text": {
+                                "type": "string"
+                            },
+                            "completed": {
+                                "type": "boolean"
+                            }
+                        },
+                        "required": [
+                            "id",
+                            "text",
+                            "completed"
+                        ],
+                        "additionalProperties": false
+                    }
+                }
+            }
+        }
+    ]
+}
