@@ -31,8 +31,13 @@ JRPC-Client is a simple JSON-RPC 2.0 client for node.js and browser, developed i
 npm i @habeetat/jrpc-client
 ```
 
-## How to use
+## Todo
 
+- [ ] Test
+- [ ] Documentation
+- [ ] Enable test in github action
+
+## How to use
 
 ```typescript
 export interface TestServerRpcMethods {
