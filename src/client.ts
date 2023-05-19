@@ -31,7 +31,7 @@ export class JRPCClient<T> {
     // @ts-ignore
     private async sendRequest<K extends keyof T>(method: K, params: Parameters<T[K]>): Promise<ReturnType<T[K]>> {
         const data = {
-            jsonJRPC: "2.0",
+            jsonrpc: "2.0",
             method: method.toString(),
             params: params,
             id: uuidv4(),
